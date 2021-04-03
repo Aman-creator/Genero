@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Schema gstVersion="31407" id="{a624a604-e001-4573-948b-2050e0aa09ee}" version="4.0">
+  <AGSettings version="1.1">
+    <DynamicProperties version="2">
+      <DynamicProperty description="Associated label when generating form" initialValue="" isDefaultInherited="false" isHidden="false" label="Label" name="label" readOnly="false" type="TEXT"/>
+      <DynamicProperty description="Associated widget" editorInfo="contains:ButtonEdit|CheckBox|ComboBox|DateEdit|DateTimeEdit|Edit|FFImage|FFLabel|Field|Phantom|ProgressBar|RadioGroup|Slider|SpinEdit|TextEdit|TimeEdit" initialValue="Edit" isDefaultInherited="false" isHidden="false" label="Widget" name="widget" readOnly="false" type="ENUM"/>
+      <DynamicPropertyGroup collapsed="false" description="Formfied properties" label="Formfield" name="formfieldGroup" properties="label;widget"/>
+    </DynamicProperties>
+    <NodeInfos version="1">
+      <NodeInfo mimeType="db/column" properties="widget;label"/>
+    </NodeInfos>
+  </AGSettings>
+  <ExtractionSettings/>
+  <Table active="true" name="customer" status="U" uuid="db/table161">
+    <Column fglLength="4" fglType="2" name="store_num" notNull="true" order="1" status="U" uuid="db/column713"/>
+    <Column fglLength="20" fglType="0" name="store_name" notNull="true" order="2" status="U" uuid="db/column715"/>
+    <Column fglLength="20" fglType="0" name="addr" notNull="false" order="3" status="U" uuid="db/column717"/>
+    <Column fglLength="20" fglType="0" name="addr2" notNull="false" order="4" status="U" uuid="db/column719"/>
+    <Column fglLength="15" fglType="0" name="city" notNull="false" order="5" status="U" uuid="db/column721"/>
+    <Column fglLength="2" fglType="0" name="state" notNull="false" order="6" status="U" uuid="db/column723"/>
+    <Column fglLength="5" fglType="0" name="zipcode" notNull="false" order="7" status="U" uuid="db/column725"/>
+    <Column fglLength="30" fglType="0" name="contact_name" notNull="false" order="8" status="U" uuid="db/column727"/>
+    <Column fglLength="18" fglType="0" name="phone" notNull="false" order="9" status="U" uuid="db/column729"/>
+  </Table>
+  <Table active="true" name="factory" status="U" uuid="db/table163">
+    <Column fglLength="3" fglType="0" name="fac_code" notNull="true" order="1" status="U" uuid="db/column731"/>
+    <Column fglLength="15" fglType="0" name="fac_name" notNull="true" order="2" status="U" uuid="db/column733"/>
+  </Table>
+  <Table active="true" name="items" status="U" uuid="db/table165">
+    <Column fglLength="4" fglType="2" name="order_num" notNull="true" order="1" status="U" uuid="db/column735"/>
+    <Column fglLength="4" fglType="2" name="stock_num" notNull="true" order="2" status="U" uuid="db/column737"/>
+    <Column fglLength="2" fglType="1" name="quantity" notNull="true" order="3" status="U" uuid="db/column739"/>
+    <Column fglLength="2050" fglType="5" name="price" notNull="true" order="4" status="U" uuid="db/column741"/>
+  </Table>
+  <Table active="true" name="orders" status="U" uuid="db/table167">
+    <Column fglLength="4" fglType="2" name="order_num" notNull="true" order="1" status="U" uuid="db/column743"/>
+    <Column fglLength="4" fglType="7" name="order_date" notNull="true" order="2" status="U" uuid="db/column745"/>
+    <Column fglLength="4" fglType="2" name="store_num" notNull="true" order="3" status="U" uuid="db/column747"/>
+    <Column fglLength="3" fglType="0" name="fac_code" notNull="false" order="4" status="U" uuid="db/column749"/>
+    <Column fglLength="10" fglType="0" name="ship_instr" notNull="false" order="5" status="U" uuid="db/column751"/>
+    <Column fglLength="1" fglType="0" name="promo" notNull="true" order="6" status="U" uuid="db/column753"/>
+  </Table>
+  <Table active="true" name="orgnchart" status="U" uuid="db/table169">
+    <Column fglLength="4" fglType="6" name="id" notNull="true" order="1" status="U" uuid="db/column755"/>
+    <Column fglLength="100" fglType="201" name="hierachdesc" notNull="false" order="2" status="U" uuid="db/column757"/>
+    <Column fglLength="4" fglType="2" name="hierachvalue" notNull="false" order="3" status="U" uuid="db/column759"/>
+    <Column fglLength="4" fglType="2" name="parent_id" notNull="false" order="4" status="U" uuid="db/column761"/>
+  </Table>
+  <Table active="true" name="state" status="U" uuid="db/table171">
+    <Column fglLength="2" fglType="0" name="state_code" notNull="true" order="1" status="U" uuid="db/column763"/>
+    <Column fglLength="15" fglType="0" name="state_name" notNull="true" order="2" status="U" uuid="db/column765"/>
+  </Table>
+  <Table active="true" name="stock" status="U" uuid="db/table173">
+    <Column fglLength="4" fglType="2" name="stock_num" notNull="true" order="1" status="U" uuid="db/column767"/>
+    <Column fglLength="3" fglType="0" name="fac_code" notNull="true" order="2" status="U" uuid="db/column769"/>
+    <Column fglLength="15" fglType="0" name="description" notNull="true" order="3" status="U" uuid="db/column771"/>
+    <Column fglLength="2050" fglType="5" name="reg_price" notNull="true" order="4" status="U" uuid="db/column773"/>
+    <Column fglLength="2050" fglType="5" name="promo_price" notNull="false" order="5" status="U" uuid="db/column775"/>
+    <Column fglLength="4" fglType="7" name="price_updated" notNull="false" order="6" status="U" uuid="db/column777"/>
+    <Column fglLength="4" fglType="0" name="unit" notNull="true" order="7" status="U" uuid="db/column779"/>
+  </Table>
+  <Views ActiveView="View-1" showLabels="true">
+    <View Name="View-1">
+      <Layout>
+        <![CDATA[AAAAAgAAABYAZABiAC8AdABhAGIAbABlADEANwAzQKLAAAlgAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANwAxQJ9AAA+gAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANgA3QJLAAAlgAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANgAzQHkAAAyAAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANgA5QJkAAAyAAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANgAxAAAAAAAAAABAOqqquAAAAAAAAAAAAAAAAQAAABYAZABiAC8AdABhAGIAbABlADEANgA1QIkAAAyAAABAOqqquAAAAAAAAAAAAAAAAQ==]]>
+      </Layout>
+    </View>
+  </Views>
+</Schema>
